@@ -173,6 +173,9 @@ class Arena{
         foreach($this->players as $player){
             $this->plugin->getServer()->getPlayerExact($player)->sendMessage($msg);
         }
+      public function sendPopup(string $msg): void{
+        foreach($this->players as $player){
+          $this->plugin->getServer()->getPlayerExact($player)->sendMessage($msg);
     }
 
     /**
