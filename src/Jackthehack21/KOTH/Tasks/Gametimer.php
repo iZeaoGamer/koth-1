@@ -55,6 +55,9 @@ class Gametimer extends Task{
      * @param int $tick
      */
     public function onRun(int $tick){
+        if($this->secondsLeft <= 600){
+            $this->arena->sendPopup(TextFormat::colorize("&aGame ending in &b" . gmdate("i:s, $this->secondsLeft));
+            }
         $this->secondsLeft -= 0.5;
         $inBox = $this->arena->playersInBox();
         if($this->arena->king === null){
